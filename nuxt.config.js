@@ -44,6 +44,16 @@ export default {
     less: [],
     stylus: []
   },
+  webfontloader: {
+    // add Google Fonts as "custom" | workaround required
+    custom: {
+      families: ['Noto Sans JP:n4,n7', 'Roboto:n5i,n9i'],
+      urls: [
+        'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Roboto:500i,900i&display=swap'
+      ]
+    }
+  },
   /*
    ** Build configuration
    */
