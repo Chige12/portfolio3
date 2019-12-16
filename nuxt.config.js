@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/style/ress.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -39,6 +39,11 @@ export default {
    ** Nuxt.js modules
    */
   modules: [],
+  styleResources: {
+    scss: ['~/assets/style/variables.scss', '~/assets/style/mixins.scss'],
+    less: [],
+    stylus: []
+  },
   /*
    ** Build configuration
    */
@@ -46,6 +51,16 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    postcss: {
+      'postcss-cssnext': {
+        browsers: ['last 2 versions', 'ie >= 11', 'Android >= 4']
+      },
+      preset: {
+        autoprefixer: {
+          grid: true
+        }
+      }
+    },
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

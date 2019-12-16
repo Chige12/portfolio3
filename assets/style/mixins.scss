@@ -1,0 +1,132 @@
+
+@mixin roboto-black($size:4.1rem) {
+  font-family: $roboto-font;
+  font-weight: $font-black;
+  font-size: $size;
+  font-style: italic;
+}
+@mixin roboto-medium($size:1.6rem) {
+  font-family: $roboto-font;
+  font-weight: $font-medium;
+  font-size: $size;
+  font-style: italic;
+}
+@mixin noto-font($size:1.6rem, $color:$theme-navy) {
+  font-family: $noto-font;
+  font-size: $size;
+  color: $color;
+  font-feature-settings: "pkna";
+  letter-spacing: 0.05em;
+}
+
+@mixin circle-dot($size:17px, $color:$theme-gray) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $color;
+  transition: .5s $bezier-fast-ease-out;
+}
+
+@mixin stripe($time:.5s,$color:$theme-navy) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-image: linear-gradient(-45deg,
+    transparent 0%, transparent 37%,
+    $color 37%, $color 50%,
+    transparent 50%, transparent 87%,
+    $color 87%, $color );
+  background-size: 7px 7px;
+  transition: $time $bezier-fast-ease-out;
+}
+
+
+@mixin fan-clipping($size:38px,$p_size:50px,$color:$theme-green){
+  position: relative;
+  width: $p_size;
+  height: $p_size;
+  top: -($p_size - $size) / 2;
+  left: -($p_size - $size) / 2;
+  .circle-left {
+    position: absolute;
+    width: $p_size;
+    height: $p_size;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    .inner {
+      position: absolute;
+      width: $p_size;
+      height: $p_size;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 100%;
+      background: linear-gradient(90deg, $color 50%, transparent 50%);
+      animation: fan-clip-left-end .4s $bezier-fast-ease-out 0s forwards;
+    }
+  }
+  .circle-right {
+    position: absolute;
+    width: $p_size;
+    height: $p_size;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%);
+    .inner {
+      position: absolute;
+      width: $p_size;
+      height: $p_size;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 100%;
+      background: linear-gradient(-90deg, $color 50%, transparent 50%);
+      animation: fan-clip-right-end .4s $bezier-fast-ease-in 0s forwards;
+    }
+  }
+  &:hover {
+    .circle-left .inner {
+      animation: fan-clip-left-start .4s $bezier-fast-ease-out 0s forwards;
+    }
+    .circle-right .inner {
+      animation: fan-clip-right-start .4s $bezier-fast-ease-in 0s forwards;
+    }
+  }
+  @keyframes fan-clip-left-start {
+    0% { transform: rotate(-180deg); }
+    50% { transform: rotate(-180deg); }
+    100% { transform: rotate(0deg); }
+  }
+  @keyframes fan-clip-left-end {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+  }
+  @keyframes fan-clip-right-start {
+    0% { transform: rotate(-180deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  @keyframes fan-clip-right-end {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(180deg); }
+  }
+}
