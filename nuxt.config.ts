@@ -1,6 +1,6 @@
-// import { Configuration } from '@nuxt/types'
+import { Configuration } from '@nuxt/types'
 
-export default {
+const config: Configuration = {
   mode: 'universal',
   /*
    ** Headers of the page
@@ -65,13 +65,8 @@ export default {
      ** You can extend webpack config here
      */
     postcss: {
-      'postcss-cssnext': {
-        browsers: ['last 2 versions', 'ie >= 11', 'Android >= 4']
-      },
       preset: {
-        autoprefixer: {
-          grid: true
-        }
+        autoprefixer: { grid: 'autoplace' }
       }
     },
     extend(config, ctx) {
@@ -90,4 +85,4 @@ export default {
   }
 }
 
-// module.exports = nuxtConfig
+export default config

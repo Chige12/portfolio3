@@ -1,3 +1,8 @@
+const {
+  rules: bpRules
+} = require('eslint-config-airbnb-base/rules/best-practices')
+const { rules: styleRules } = require('eslint-config-airbnb-base/rules/style')
+
 module.exports = {
   root: true,
   env: {
@@ -14,10 +19,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended'
   ],
-  plugins: [
-    'prettier'
-  ],
+  plugins: ['prettier'],
   // add your custom rules here
-  rules: {
-  }
+  rules: {}
 }
