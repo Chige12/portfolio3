@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/svg": "^0.1.6",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.12.2",
     "nuxt-webfontloader": "^1.1.0",
     "ress": "^2.0.4"
   },
