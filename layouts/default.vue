@@ -1,7 +1,9 @@
-<template>
-  <div>
-    <nuxt />
-  </div>
+<template lang="pug">
+  .default
+    .cinema-scope
+      .cinema-scope-top
+      .cinema-scope-bottom
+    nuxt
 </template>
 
 <style lang="scss">
