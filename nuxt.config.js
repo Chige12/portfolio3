@@ -1,3 +1,5 @@
+// import { Configuration } from '@nuxt/types'
+
 export default {
   mode: 'universal',
   /*
@@ -33,7 +35,8 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
@@ -62,13 +65,8 @@ export default {
      ** You can extend webpack config here
      */
     postcss: {
-      'postcss-cssnext': {
-        browsers: ['last 2 versions', 'ie >= 11', 'Android >= 4']
-      },
       preset: {
-        autoprefixer: {
-          grid: true
-        }
+        autoprefixer: { grid: 'autoplace' }
       }
     },
     extend(config, ctx) {
@@ -86,3 +84,5 @@ export default {
     }
   }
 }
+
+// export default config
