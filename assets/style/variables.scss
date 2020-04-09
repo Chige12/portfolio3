@@ -1,0 +1,80 @@
+//color
+
+$black: #333;
+$dark-gray: #444;
+$gray: #666;
+$light-gray: #ccc;
+$white: #fff;
+
+$dark-brown: #4c3f38;
+$light-brown: #eee5de;
+
+$official-twitter: #55acee;
+$official-facebook: #455a9e;
+
+$theme-gray: #c9cac2;
+$theme-green: #869849;
+$theme-mint: #48a290;
+$theme-navy: #343141;
+$theme-pink: #c42a66;
+
+$theme-gray-1: #bbbdb3;
+$theme-green-1: #73833f;
+$theme-mint-1: #479a89;
+$theme-navy-1: #2a2834;
+$theme-pink-1: #b4275d;
+
+$theme-gray-li: #d4d4ce;
+$theme-green-li: #9eb35c;
+$theme-mint-li: #57bba7;
+$theme-navy-li: #464255;
+$theme-pink-li: #e63a7c;
+
+$theme-gray-text: #87877e;
+$theme-gray-2: #707069;
+$theme-dark-gray: #3f3f3d;
+
+$theme-mint-a: #3a8173;
+
+$sub-red: #c24757;
+
+//font-family
+
+$primary-font: '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3',
+  'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', 'ＭＳ 明朝', serif;
+$rounded-font: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro',
+  'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+  'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
+
+$noto-font: 'Noto Sans';
+$roboto-font: 'Roboto';
+$font-medium: 500;
+$font-black: 900;
+
+//font-color
+
+$font-color-brown: $dark-brown;
+$font-color-black: $black;
+
+//animation
+
+$bezier-fast-ease-out: cubic-bezier(0.1, 0, 0, 1);
+$bezier-fast-ease-in: cubic-bezier(0, 0.1, 1, 0);
+$bezier-fast-ease-in-out: cubic-bezier(0.77, 0, 0.23, 1);
+
+$bezier-ease-out: cubic-bezier(0.06, 0.67, 0.02, 1);
+
+.v-enter-active {
+  transition: all 0.8s ease;
+}
+
+.v-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.v-enter,
+.v-leave-to {
+  margin: 0;
+  height: 0;
+  opacity: 0;
+}
