@@ -49,8 +49,8 @@ export default {
     custom: {
       families: ['Noto Sans JP:n4,n7', 'Roboto:n5i,n9i'],
       urls: [
-        'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap',
-        'https://fonts.googleapis.com/css?family=Roboto:500i,900i&display=swap'
+        'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,900&display=swap'
       ]
     }
   },
