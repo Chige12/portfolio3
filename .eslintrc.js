@@ -10,7 +10,8 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    // parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
   },
   extends: [
     '@nuxtjs',
@@ -19,7 +20,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended'
   ],
-  plugins: ['prettier'],
+  plugins: ['prettier', '@typescript-eslint/eslint-plugin'],
   // add your custom rules here
   rules: {
     'vue/camelcase': styleRules.camelcase,

@@ -21,7 +21,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#48a290' },
   /*
    ** Global CSS
    */
@@ -29,7 +29,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/mixin-common-methods'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -43,9 +43,11 @@ export default {
    */
   modules: ['@nuxtjs/style-resources', 'nuxt-webfontloader', '@nuxtjs/svg'],
   styleResources: {
-    scss: ['~/assets/style/variables.scss', '~/assets/style/mixins.scss'],
-    less: [],
-    stylus: []
+    scss: [
+      '~/assets/style/variables.scss',
+      '~/assets/style/z-index.scss',
+      '~/assets/style/mixins.scss'
+    ]
   },
   webfontloader: {
     // add Google Fonts as "custom" | workaround required

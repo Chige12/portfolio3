@@ -1,16 +1,18 @@
-@mixin roboto-black($size: 4.1rem) {
+@mixin roboto-black($size: 40px, $color: $theme-gray-d2) {
   font-family: $roboto-font;
   font-weight: $font-black;
   font-size: $size;
+  color: $color;
   font-style: italic;
 }
-@mixin roboto-medium($size: 1.6rem) {
+@mixin roboto-medium($size: 16px, $color: $theme-gray-d2) {
   font-family: $roboto-font;
   font-weight: $font-medium;
   font-size: $size;
+  color: $color;
   font-style: italic;
 }
-@mixin noto-font($size: 1.6rem, $color: $theme-navy) {
+@mixin noto-font($size: 16px, $color: $theme-navy) {
   font-family: $noto-font;
   font-size: $size;
   color: $color;
@@ -18,12 +20,40 @@
   // letter-spacing: 0.05em;
 }
 
-@mixin circle-dot($size: 17px, $color: $theme-gray) {
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-  background: $color;
-  transition: 0.5s $bezier-fast-ease-out;
+@mixin absolute(
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null,
+  $margin: auto,
+  $z: $z-default
+) {
+  position: absolute;
+  margin: $margin;
+  z-index: $z;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
+
+@mixin flex(
+  $wrap: nowrap,
+  $justifyContent: space-between,
+  $alignItems: center
+) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
 }
 
 @mixin stripe($time: 0.5s, $color: $theme-navy) {
