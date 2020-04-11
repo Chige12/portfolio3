@@ -5,7 +5,7 @@
     :isClickMeChanged="isClickMeChanged"
   )
   AboutTop
-  .container Portfolio site
+  MainWorks
 </template>
 
 <script lang="ts">
@@ -13,6 +13,7 @@ import Vue from 'vue'
 import IndexTopVisual from '~/components/organisms/IndexTopVisual.vue'
 import ClickMe from '~/components/atoms/ClickMe.vue'
 import AboutTop from '~/components/organisms/AboutTop.vue'
+import MainWorks from '~/components/organisms/MainWorks.vue'
 
 type Data = {
   isClickMeChanged: boolean
@@ -22,7 +23,8 @@ export default Vue.extend({
   components: {
     IndexTopVisual,
     ClickMe,
-    AboutTop
+    AboutTop,
+    MainWorks
   },
   data(): Data {
     return {
@@ -55,14 +57,5 @@ export default Vue.extend({
 .index {
   height: 100%;
   overflow-y: scroll;
-}
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  @include roboto($weight: $font-bold);
 }
 </style>
