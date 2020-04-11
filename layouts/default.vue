@@ -1,11 +1,10 @@
 <template lang="pug">
   .layout
-    .front
-      CinemaScope(@menuShow="menuShow")
-      transition(name="NaviMenu")
-        NavigationMenu(v-if="isMenuShowed")
+    CinemaScope(@menuShow="menuShow")
+    transition(name="NaviMenu")
+      NavigationMenu(v-if="isMenuShowed")
     .page-wrapper
-      nuxt.page
+      nuxt
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -35,9 +34,7 @@ export default Vue.extend({
 </script>
 <style lang="scss">
 html {
-  font-family: $noto-font;
-  font-size: 16px;
-  word-spacing: 1px;
+  @include noto($color: $theme-navy);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -71,16 +68,9 @@ button {
   outline: none;
 }
 
-.front {
-  z-index: 200;
-}
 .page-wrapper {
-  z-index: auto;
   height: 100%;
   padding: 18px 0;
-  .page {
-    overflow-y: scroll;
-  }
 }
 
 // NaviMenu transition

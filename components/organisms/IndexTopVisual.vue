@@ -97,7 +97,7 @@ export default Vue.extend({
     }
   }
   .logo-txt {
-    @include roboto-black($size: 22px, $color: $theme-gray-d3);
+    @include roboto($size: 22px, $weight: $font-bold);
     text-align: center;
   }
 }

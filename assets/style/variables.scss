@@ -14,8 +14,7 @@ $theme-pink: #c42a66;
 
 $theme-gray-d1: #bbbdb3;
 $theme-gray-d2: #9c9d96;
-$theme-gray-d3: #8f9089;
-$theme-gray-d4: #727469;
+$theme-gray-d3: #727469;
 
 $theme-greem-l1: #7ab5a9;
 
@@ -33,11 +32,11 @@ $official-youtube: #ff0000;
 $noto-font: 'Noto Sans JP', 'Noto Sans Japanese', 'Noto Sans CJK JP',
   'Source Sans Pro', sans-serif;
 $roboto-font: 'Roboto';
+$font-regular: 400;
 $font-medium: 500;
-$font-black: 900;
+$font-bold: 700;
 
 //animation
-
 $bezier-fast-ease-out: cubic-bezier(0.1, 0, 0, 1);
 $bezier-fast-ease-in: cubic-bezier(0, 0.1, 1, 0);
 $bezier-fast-ease-in-out: cubic-bezier(0.77, 0, 0.23, 1);

@@ -1,21 +1,16 @@
-@mixin roboto-black($size: 40px, $color: $theme-gray-d2) {
+@mixin roboto($size: 16px, $color: $theme-gray-d2, $weight: $font-bold) {
   font-family: $roboto-font;
-  font-weight: $font-black;
+  font-weight: $weight;
   font-size: $size;
   color: $color;
   font-style: italic;
 }
-@mixin roboto-medium($size: 16px, $color: $theme-gray-d2) {
-  font-family: $roboto-font;
-  font-weight: $font-medium;
-  font-size: $size;
-  color: $color;
-  font-style: italic;
-}
-@mixin noto-font($size: 16px, $color: $theme-navy) {
+@mixin noto($size: 16px, $color: $theme-navy) {
   font-family: $noto-font;
+  font-weight: $font-regular;
   font-size: $size;
   color: $color;
+  word-spacing: 1px;
   font-feature-settings: 'pkna';
   // letter-spacing: 0.05em;
 }

@@ -178,7 +178,7 @@ $dot-circle-width: 14px;
 .link-text {
   display: block;
   margin: 0;
-  @include roboto-medium(32px);
+  @include roboto($size: 32px, $weight: $font-medium);
   color: $theme-navy;
 }
 .link-over,
@@ -194,7 +194,7 @@ $dot-circle-width: 14px;
   overflow: hidden;
   transform: translateX(-100%);
   .link-over-text {
-    @include roboto-medium(32px);
+    @include roboto($size: 32px, $weight: $font-medium);
     transform: translateX(100%);
   }
 }

@@ -52,10 +52,10 @@ export default {
   webfontloader: {
     // add Google Fonts as "custom" | workaround required
     custom: {
-      families: ['Noto Sans JP:n4,n7', 'Roboto:n5i,n9i'],
+      families: ['Noto Sans JP:n4,n7', 'Roboto:n5i,n7i'],
       urls: [
         'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap',
-        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,900&display=swap'
+        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700&display=swap'
       ]
     }
   },

@@ -19,10 +19,16 @@ export default Vue.extend({
     }
   },
   mounted() {
-    window.addEventListener('load', () => {
+    this.listen(window, 'load', this.loadFinish)
+    // if (location.host === 'localhost:3000') {
+    //   this.loadFinish()
+    // }
+  },
+  methods: {
+    loadFinish() {
       this.isLoadFinished = true
       this.$emit('menuShow')
-    })
+    }
   }
 })
 </script>
