@@ -7,27 +7,19 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+
+type WorkInterface = {
+  id: number
+  title: string
+  image: string
+  lead: string
+}
+
 export default Vue.extend({
   props: {
     work: {
-      type: Object,
-      default: () => ({}),
-      id: {
-        type: Number,
-        default: 0
-      },
-      title: {
-        type: String,
-        default: ''
-      },
-      image: {
-        type: String,
-        default: ''
-      },
-      lead: {
-        type: String,
-        default: ''
-      }
+      type: Object as () => WorkInterface,
+      default: () => {}
     }
   },
   methods: {
