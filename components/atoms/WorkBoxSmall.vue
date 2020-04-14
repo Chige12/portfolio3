@@ -1,12 +1,16 @@
 <template lang="pug">
   .work-box
-    button(@click="workModalOpen()").work-box-btn
-      .work-box-img(:src="work.image", :alt="work.title")
+    nuxt-link(
+      :to="`./works/${work.hash}`"
+      @click.native="showWorkDetails(work.hash)"
+    ).work-box-btn
+      img.work-box-img(:src="work.image", :alt="work.title")
       .work-box-title {{work.title}}
       .work-box-lead {{work.lead}}
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { mapMutations } from 'vuex'
 
 type WorkInterface = {
   id: number
@@ -23,7 +27,9 @@ export default Vue.extend({
     }
   },
   methods: {
-    workModalOpen() {}
+    ...mapMutations({
+      showWorkDetails: 'works/showWorkDetails'
+    })
   }
 })
 </script>
@@ -37,18 +43,19 @@ export default Vue.extend({
   width: 285px;
 }
 .work-box-img {
+  display: block;
   width: 285px;
   height: 162px;
   object-fit: cover;
   background-color: $theme-gray;
 }
 .work-box-title {
-  margin-top: 8px;
+  margin-top: 16px;
   text-align: left;
   @include noto($color: $theme-gray-d3, $weight: $font-bold);
 }
 .work-box-lead {
-  margin-top: 4px;
+  margin-top: 8px;
   text-align: left;
   @include noto($size: 13px, $color: $theme-gray-d3);
 }

@@ -25,6 +25,21 @@ export default Vue.extend({
       isMenuShowed: false
     }
   },
+  watch: {
+    $route(to, from) {
+      if (to.path !== from.path) {
+        console.log(to.name)
+        if (to.name === 'works-hash') {
+          this.isMenuShowed = false
+        } else {
+          this.isMenuShowed = true
+        }
+      }
+    }
+  },
+  created() {
+    this.$store.dispatch('works/fetchWorks')
+  },
   methods: {
     menuShow() {
       this.isMenuShowed = true
@@ -33,52 +48,22 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss">
-html {
-  @include noto($color: $theme-navy);
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  height: 100%;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body,
-#__nuxt,
-#__layout,
-.layout {
-  height: 100%;
-}
-
-a,
-a:link,
-a:visited {
-  outline: none;
-  text-decoration: none;
-}
-
-button {
-  outline: none;
-}
+@import '~/assets/style/_layout.scss';
 
 .page-wrapper {
   height: 100%;
   padding: 18px 0;
+  overflow: hidden;
 }
 
 // NaviMenu transition
-.NaviMenu-enter-active {
+.NaviMenu-enter-active,
+.NaviMenu-leave-active {
   transition: all 0.6s $bezier-fast-ease-out;
   transform: translateY(0px);
 }
-.NaviMenu-enter {
+.NaviMenu-enter,
+.NaviMenu-leave-to {
   transform: translateY(-64px);
 }
 </style>

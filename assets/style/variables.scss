@@ -16,7 +16,7 @@ $theme-gray-d1: #bbbdb3;
 $theme-gray-d2: #9c9d96;
 $theme-gray-d3: #727469;
 
-$theme-greem-l1: #7ab5a9;
+$theme-mint-l1: #7ab5a9;
 
 $official-twitter: #55acee;
 $official-facebook: #455a9e;
@@ -52,3 +52,18 @@ $bezier-ease-out: cubic-bezier(0.06, 0.67, 0.02, 1);
 .fade-leave-to {
   opacity: 0;
 }
+
+// .page-enter {
+//   transform: translateX(100%);
+// }
+// .page-enter-to {
+//   transform: translateX(0);
+//   transition: 0.5s $bezier-fast-ease-out;
+// }
+// .page-leave {
+//   transform: translateX(0);
+// }
+// .page-leave-to {
+//   transform: translateX(100%);
+//   transition: 0.5s $bezier-fast-ease-out;
+// }

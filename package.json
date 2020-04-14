@@ -14,12 +14,14 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.2",
     "@nuxtjs/svg": "^0.1.7",
+    "firebase": "^7.14.0",
     "nuxt": "^2.12.2",
     "nuxt-webfontloader": "^1.1.0",
     "ress": "^2.0.4"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.2",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",

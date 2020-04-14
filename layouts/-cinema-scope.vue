@@ -27,7 +27,9 @@ export default Vue.extend({
   methods: {
     loadFinish() {
       this.isLoadFinished = true
-      this.$emit('menuShow')
+      if (this.$route.name !== 'works-hash') {
+        this.$emit('menuShow')
+      }
     }
   }
 })

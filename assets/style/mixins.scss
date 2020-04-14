@@ -19,8 +19,8 @@
   $left: null,
   $right: null,
   $bottom: null,
-  $margin: auto,
-  $z: $z-default
+  $z: $z-default,
+  $margin: auto
 ) {
   position: absolute;
   margin: $margin;
