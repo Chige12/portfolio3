@@ -1,5 +1,8 @@
 // import { Configuration } from '@nuxt/types'
 
+require('dotenv').config()
+const { FB_OWNER_UID } = process.env
+
 export default {
   mode: 'universal',
   /*
@@ -29,7 +32,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/mixin-common-methods'],
+  plugins: ['@/plugins/mixin-common-methods', '@/plugins/firebase'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -41,7 +44,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources', 'nuxt-webfontloader', '@nuxtjs/svg'],
+  modules: [
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
+    'nuxt-webfontloader',
+    '@nuxtjs/svg'
+  ],
   styleResources: {
     scss: [
       '~/assets/style/variables.scss',
@@ -84,6 +92,9 @@ export default {
         })
       }
     }
+  },
+  env: {
+    FB_OWNER_UID
   }
 }
 
