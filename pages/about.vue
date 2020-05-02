@@ -5,10 +5,15 @@
       .about-header-cover
         .about-header-cover-text About
       .back-index
-        nuxt-link(to="./").back-index-link
+        nuxt-link(to="/").back-index-link
           ArrowSvg.svg-wrapper
           span Index
-    AboutTop(:style="{transform: `translateY(${aboutPageTop}px`}").about-top-animation
+    .about-top-wrapper-parent(ref="aboutTop")
+      AboutTop(
+        id="aboutTop"
+        :style="{transform: `translateY(${aboutPageTop}px`}"
+      ).about-top-animation
+    .about-hoge
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -29,6 +34,10 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss" scoped>
+.about {
+  height: 100%;
+  overflow-y: scroll;
+}
 .about-header {
   position: relative;
   width: 100%;
@@ -89,5 +98,9 @@ export default Vue.extend({
   100% {
     transform: translateY(0);
   }
+}
+
+.about-hoge {
+  height: 1000px;
 }
 </style>

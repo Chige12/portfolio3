@@ -1,8 +1,7 @@
 <template lang="pug">
   .work-box
-    nuxt-link(
-      :to="`./works/${work.hash}`"
-      @click.native="showWorkDetails(work.hash)"
+    button(
+      @click="showWorkDetails"
     ).work-box-btn
       img.work-box-img(:src="work.image", :alt="work.title")
       .work-box-title {{work.title}}
@@ -10,10 +9,9 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { mapMutations } from 'vuex'
 
 type WorkInterface = {
-  id: number
+  hash: string
   title: string
   image: string
   lead: string
@@ -24,12 +22,19 @@ export default Vue.extend({
     work: {
       type: Object as () => WorkInterface,
       default: () => {}
+    },
+    id: {
+      type: Number,
+      default: 0
     }
   },
   methods: {
-    ...mapMutations({
-      showWorkDetails: 'works/showWorkDetails'
-    })
+    async showWorkDetails() {
+      await this.$emit('saveScrollHeight')
+      this.$store.commit('works/showWorkDetails', this.id)
+      this.$store.commit('works/setworkDetailsBackPath', '/')
+      this.$router.push(`./works/detail#${this.work.hash}`)
+    }
   }
 })
 </script>

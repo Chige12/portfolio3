@@ -43,6 +43,11 @@ $bezier-fast-ease-in-out: cubic-bezier(0.77, 0, 0.23, 1);
 
 $bezier-ease-out: cubic-bezier(0.06, 0.67, 0.02, 1);
 
+$bezier-circle-ease-in: cubic-bezier(0.2, 0, 1, 0.2);
+$bezier-circle-ease-out: cubic-bezier(0, 0.2, 0.2, 1);
+$bezier-circle-ease-in-out: cubic-bezier(1, 0, 0, 1);
+$bezier-circle-ease-out-in: cubic-bezier(0, 1, 1, 0);
+
 // fade
 .fade-enter-active,
 .fade-leave-active {

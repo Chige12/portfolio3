@@ -5,9 +5,8 @@
       .real-name-ja 内田 啓太
       .about-comment デザインのできるエンジニアになりたいな
     .about-chige-icon
-      nuxt-link(
-        @click.native="goAboutPageTop()"
-        to="./about"
+      button(
+        @click="goAboutPageTop()"
         :class="{'--unable': !isAboutLinkEnabled}"
       ).about-chige-icon-link
         img.about-chige-icon-img(src="~/assets/imgs/Chige.png")
@@ -81,9 +80,11 @@ export default Vue.extend({
     this.changeAge()
   },
   methods: {
-    goAboutPageTop() {
+    async goAboutPageTop() {
       const clientRect = this.$el.getBoundingClientRect()
       this.$store.commit('styles/setAboutPageTop', clientRect.top - 112)
+      await this.$emit('saveScrollHeight')
+      this.$router.push('/about')
     },
     changeAge() {
       // 年齢変更
@@ -104,7 +105,7 @@ export default Vue.extend({
   }
 })
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .about-top {
   margin: 0 32px;
   @include flex();

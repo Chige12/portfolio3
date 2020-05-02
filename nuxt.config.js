@@ -32,7 +32,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/mixin-common-methods', '@/plugins/firebase'],
+  plugins: [
+    '@/plugins/mixin-common-methods',
+    '@/plugins/firebase',
+    { src: '~/plugins/vue-carousel', ssr: false }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,6 +54,9 @@ export default {
     'nuxt-webfontloader',
     '@nuxtjs/svg'
   ],
+  router: {
+    middleware: 'pages'
+  },
   styleResources: {
     scss: [
       '~/assets/style/variables.scss',

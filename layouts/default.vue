@@ -28,8 +28,7 @@ export default Vue.extend({
   watch: {
     $route(to, from) {
       if (to.path !== from.path) {
-        console.log(to.name)
-        if (to.name === 'works-hash') {
+        if (to.name === 'works-detail') {
           this.isMenuShowed = false
         } else {
           this.isMenuShowed = true
