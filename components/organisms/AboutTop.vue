@@ -25,7 +25,6 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-// @ts-ignore
 import LinkSvg from '~/assets/svgs/link.svg?inline'
 
 type Data = {
@@ -82,7 +81,13 @@ export default Vue.extend({
   methods: {
     async goAboutPageTop() {
       const clientRect = this.$el.getBoundingClientRect()
-      this.$store.commit('styles/setAboutPageTop', clientRect.top - 112)
+      this.$store.commit(
+        'styles/setAboutPageTop',
+        clientRect.top - (18 + 112 + 32)
+      )
+      // cinema-scroll-top height 18px
+      // about-header-cover height 112px
+      // about-top-wrapper-parent margin-top 32px
       await this.$emit('saveScrollHeight')
       this.$router.push('/about')
     },

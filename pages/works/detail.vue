@@ -55,9 +55,7 @@ import Slide from 'vue-carousel/src/Slide.vue'
 import WorkDetailBox from '~/components/organisms/WorkDetailBox.vue'
 import LoadingAnm from '~/components/atoms/LoadingAnm.vue'
 
-// @ts-ignore
 import TimesSvg from '~/assets/svgs/times.svg?inline'
-// @ts-ignore
 import ArrowSvg from '~/assets/svgs/arrow.svg?inline'
 
 type Data = {

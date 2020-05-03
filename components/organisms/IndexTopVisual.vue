@@ -21,7 +21,6 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-// @ts-ignore
 import LogoSvg from '~/assets/svgs/chige_logo.svg?inline'
 
 export default Vue.extend({
