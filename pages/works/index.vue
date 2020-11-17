@@ -5,11 +5,13 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
 export default Vue.extend({
   computed: {
-    worksData() {
-      return this.$store.getters['works/getWorks']
-    }
+    ...mapGetters({
+      worksData: 'works/getWorks'
+    })
   }
 })
 </script>

@@ -9,7 +9,6 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-// @ts-ignore
 import ArrowSvg from '~/assets/svgs/arrow.svg?inline'
 
 type Data = {

@@ -4,17 +4,20 @@ const db = firebase.firestore()
 export const state = () => ({
   works: [],
   isWorkDetailsShowed: false,
-  workDetailsHash: '',
+  workDetailsId: 0,
   workDetailsBackPath: '/works'
 })
 
 export const mutations = {
-  showWorkDetails(state, hash) {
+  showWorkDetails(state, id) {
     state.isWorkDetailsShowed = true
-    state.workDetailsHash = hash
+    state.workDetailsId = id
   },
   hideWorkDetails(state) {
     state.isWorkDetailsShowed = false
+  },
+  setworkDetailsBackPath(state, path) {
+    state.workDetailsBackPath = path
   },
   updateWork(state, works) {
     const newWorks = [...state.works, ...works]

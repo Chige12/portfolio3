@@ -27,7 +27,8 @@ export default Vue.extend({
   methods: {
     loadFinish() {
       this.isLoadFinished = true
-      if (this.$route.name !== 'works-hash') {
+      console.log(this.$route)
+      if (this.$route.name !== 'works-detail') {
         this.$emit('menuShow')
       }
     }
@@ -59,6 +60,9 @@ export default Vue.extend({
     .cinema-scope-bottom {
       height: 18px;
     }
+  }
+  .loading-anm {
+    @include absolute($z: $z-cinema-scope);
   }
 }
 </style>

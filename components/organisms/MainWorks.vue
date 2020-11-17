@@ -2,13 +2,16 @@
   .main-works
     .main-works-title Works
     .main-works-list
-      WorkBoxSmall(
-        v-for="(work,work_id) in worksData"
-        :key="`main-work-${work_id}`"
-        :work="work"
-      )
+      transition-group(tag="div" name="fade" appear).main-works-list-wrapper
+        WorkBoxSmall(
+          v-for="(work,work_id) in worksData"
+          :key="`main-work-${work_id}`"
+          :work="work"
+          :id="work_id"
+          @saveScrollHeight="saveScrollHeight"
+        )
     .and-more
-      nuxt-link(to="./works").and-more-link and more...
+      nuxt-link(to="/works").and-more-link and more...
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -21,6 +24,11 @@ export default Vue.extend({
   computed: {
     worksData() {
       return this.$store.getters['works/getSmallWorks']
+    }
+  },
+  methods: {
+    saveScrollHeight() {
+      this.$emit('saveScrollHeight')
     }
   }
 })
@@ -38,6 +46,9 @@ export default Vue.extend({
   margin: 0 auto;
   margin-top: 40px;
   max-width: 960px;
+}
+.main-works-list-wrapper {
+  width: 100%;
   @include flex($wrap: wrap, $justifyContent: center);
 }
 .and-more {

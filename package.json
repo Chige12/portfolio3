@@ -17,7 +17,8 @@
     "firebase": "^7.14.0",
     "nuxt": "^2.12.2",
     "nuxt-webfontloader": "^1.1.0",
-    "ress": "^2.0.4"
+    "ress": "^2.0.4",
+    "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.2",

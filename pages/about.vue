@@ -5,20 +5,29 @@
       .about-header-cover
         .about-header-cover-text About
       .back-index
-        nuxt-link(to="./").back-index-link
-          ArrowSvg.svg-wrapper
+        nuxt-link(to="/").back-index-link
+          ArrowSvg.svg-wrapper  
           span Index
-    AboutTop(:style="{transform: `translateY(${aboutPageTop}px`}").about-top-animation
+    .about-top-wrapper-parent
+      AboutTop(
+        id="aboutTop"
+        :style="{transform: `translateY(${aboutPageTop}px`}"
+      ).about-top-animation
+    AboutLinks
+    AboutSkills
 </template>
 <script lang="ts">
 import Vue from 'vue'
 import AboutTop from '~/components/organisms/AboutTop.vue'
-// @ts-ignore
+import AboutLinks from '~/components/organisms/AboutLinks.vue'
+import AboutSkills from '~/components/organisms/AboutSkills.vue'
 import ArrowSvg from '~/assets/svgs/arrow.svg?inline'
 
 export default Vue.extend({
   components: {
     AboutTop,
+    AboutLinks,
+    AboutSkills,
     ArrowSvg
   },
   computed: {
@@ -29,6 +38,10 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss" scoped>
+.about {
+  height: 100%;
+  overflow-y: scroll;
+}
 .about-header {
   position: relative;
   width: 100%;
@@ -89,5 +102,9 @@ export default Vue.extend({
   100% {
     transform: translateY(0);
   }
+}
+
+.about-top-wrapper-parent {
+  margin-top: 32px;
 }
 </style>
