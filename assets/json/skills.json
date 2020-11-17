@@ -1,0 +1,122 @@
+[
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "HTML",
+    "subName": "HTML5 / Pug",
+    "level": "90",
+    "icon": "Html5Svg"
+  },
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "CSS",
+    "subName": "CSS3 / Sass (SCSS)",
+    "level": "90",
+    "icon": "Css3Svg"
+  },
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "JavaScript",
+    "subName": "Vue.js (Nuxt.js) / React.js",
+    "level": "75",
+    "icon": "JavascriptSvg"
+  },
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "TypeScript",
+    "subName": "× Nuxt.js",
+    "level": "10",
+    "icon": "TypescriptSvg"
+  },
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "Python",
+    "subName": "",
+    "level": "10",
+    "icon": "PythonSvg"
+  },
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "Git",
+    "subName": "command",
+    "level": "60",
+    "icon": "GitSvg"
+  },
+  {
+    "type": "cording",
+    "preName": "",
+    "name": "Arduino",
+    "subName": "(電気工作)",
+    "level": "30",
+    "icon": "ArduinoSvg"
+  },
+  {
+    "type": "design",
+    "preName": "Adobe",
+    "name": "Illustrator",
+    "subName": "",
+    "level": "90",
+    "icon": "IllustratorSvg"
+  },
+  {
+    "type": "design",
+    "preName": "Adobe",
+    "name": "Photoshop",
+    "subName": "",
+    "level": "60",
+    "icon": "PhotoshopSvg"
+  },
+  {
+    "type": "design",
+    "preName": "Adobe",
+    "name": "InDesign",
+    "subName": "",
+    "level": "40",
+    "icon": "IndesignSvg"
+  },
+  {
+    "type": "design",
+    "preName": "Adobe",
+    "name": "AfterEffects",
+    "subName": "",
+    "level": "60",
+    "icon": "AfterEffectsSvg"
+  },
+  {
+    "type": "design",
+    "preName": "",
+    "name": "Figma",
+    "subName": "UI/UX Design",
+    "level": "60",
+    "icon": "FigmaSvg"
+  },
+  {
+    "type": "design",
+    "preName": "",
+    "name": "AviUtl",
+    "subName": "+ Script control",
+    "level": "94",
+    "icon": "AviUtlSvg"
+  },
+  {
+    "type": "design",
+    "preName": "CLIP STUDIO",
+    "name": "PAINT EX",
+    "subName": "",
+    "level": "20",
+    "icon": "ClipStudioPaintSvg"
+  },
+  {
+    "type": "design",
+    "preName": "",
+    "name": "Illustration",
+    "subName": "デッサン / 挿絵イラスト等",
+    "level": "20",
+    "icon": "DessinSvg"
+  }
+]

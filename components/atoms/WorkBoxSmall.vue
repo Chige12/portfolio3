@@ -3,7 +3,8 @@
     button(
       @click="showWorkDetails"
     ).work-box-btn
-      img.work-box-img(:src="work.image", :alt="work.title")
+      .work-box-img-wrapper
+        img.work-box-img(:src="work.image", :alt="work.title")
       .work-box-title {{work.title}}
       .work-box-lead {{work.lead}}
 </template>
@@ -47,12 +48,16 @@ export default Vue.extend({
   display: block;
   width: 285px;
 }
+.work-box-img-wrapper {
+  width: 285px;
+  height: 162px;
+  background-color: $theme-gray;
+}
 .work-box-img {
   display: block;
   width: 285px;
   height: 162px;
   object-fit: cover;
-  background-color: $theme-gray;
 }
 .work-box-title {
   margin-top: 16px;
